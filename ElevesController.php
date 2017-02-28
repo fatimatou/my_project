@@ -7,7 +7,7 @@
 		public $uses = array('Eleve','Note');
 		//public $components = array('Flash');** ne marche pas avec cette version
 
-      // récupère le conten de mes tables note et élèves
+      // récupère le contenu de mes tables notes et élèves
 		  public function index(){
 			 $req= $this->Eleve->find('all',array('recursive'=> 1));
 			 //var_dump($req);
