@@ -1,6 +1,6 @@
 <?php
   /** model pour gerer les ajout /modif/supression élèves
-  * un eleve peut avoir plusieurs notes/chaque matière une note
+  * un eleve peut avoir une note/par contre chaque matière a une note
   */
   App::uses('AppModel','Model');
 
