@@ -110,6 +110,12 @@
                 $this->request->data['Note']['eleve_id']= $id;
           		  $this->Note->create();
         		    //debug($this->request->data);
+				// vérification des notes saisies
+				$var= $this->request->data['Note']['grade'];
+                		if ($var < 0 || $var > 20){
+                  			$this->Session->setFlash('Vous devez rentrer une note comprise entre 0 et 20');
+                		}
+				else{
       				  $req2= $this->Eleve->Note->saveAll($this->request->data);
       				  //debug($req2);
       					if ($req2){
@@ -119,6 +125,7 @@
       					$this->Session->setFlash('Problème d\'ajout d\'une note à un élève');
       					}
 				}
+			}
 		}
 	}
 
