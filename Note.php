@@ -19,7 +19,7 @@
   	//rglès de validation des données pour le formulaire ajout
   	public $validate= array(
   		'nommatiere'=>array('rule'=>array('custom', '#([a-zA-Z])+#'),'required'=>true,'allowEmpty'=>false,'message'=>'Merci de remplir les bonnes valeurs pour le champs matière svp!'),
-  		'grade'=>array('rule'=>array('custom','#([0-1]{1}[0-9])#','required'=>true,'allowEmpty'=>false,'message'=>'Veuillez remplir le champs Note svp!')
+  		'grade'=>array('rule'=>array('custom','#([^\-])#','required'=>true,'allowEmpty'=>false,'message'=>'Veuillez remplir le champs Note svp!')
   			)
   		);
 
